@@ -30,6 +30,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "execa": "^0.8.0",
     "faucet": "0.0.1",
     "tape": "^4.8.0",
     "xo": "^0.18.2"
