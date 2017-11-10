@@ -24,13 +24,15 @@ const cli = meow(`$ b64 --help
     $ echo 'dGVzdA==' | b64
     test
 `, {
-  boolean: [
-    'encode',
-    'decode'
-  ],
-  alias: {
-    e: 'encode',
-    d: 'decode'
+  flags: {
+    encode: {
+      type: 'boolean',
+      alias: 'e'
+    },
+    decode: {
+      type: 'boolean',
+      alias: 'd'
+    }
   }
 })
 
