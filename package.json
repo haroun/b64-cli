@@ -4,8 +4,8 @@
   "description": "Command line interface to decode/encode base64 data",
   "main": "cli.js",
   "scripts": {
-    "debug": "babel-node --inspect --debug-brk cli.js",
-    "test": "xo && babel-node test.js | faucet"
+    "debug": "node --inspect --inspect-brk cli.js",
+    "test": "xo && node test.js | faucet"
   },
   "repository": {
     "type": "git",
@@ -28,8 +28,6 @@
   },
   "homepage": "https://github.com/haroun/b64-cli#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
     "execa": "^0.8.0",
     "faucet": "0.0.1",
     "tape": "^4.8.0",
@@ -37,7 +35,7 @@
   },
   "dependencies": {
     "get-stdin": "^5.0.1",
-    "meow": "^3.7.0"
+    "meow": "git+https://github.com/sindresorhus/meow.git#4f7ded3d6b8349fc8514b672a7d5deca2d5f2e98"
   },
   "bin": {
     "b64": "cli.js"

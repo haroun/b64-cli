@@ -1,5 +1,5 @@
-import test from 'tape'
-import execa from 'execa'
+const test = require('tape')
+const execa = require('execa')
 
 test('base64 decode without options', async assert => {
   const message = 'data should be decoded'
