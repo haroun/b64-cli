@@ -27,11 +27,13 @@ const cli = meow(`$ b64 --help
   flags: {
     encode: {
       type: 'boolean',
-      alias: 'e'
+      alias: 'e',
+      default: false
     },
     decode: {
       type: 'boolean',
-      alias: 'd'
+      alias: 'd',
+      default: true
     }
   }
 })
