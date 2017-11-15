@@ -46,17 +46,5 @@
   "xo": {
     "space": true,
     "semicolon": false
-  },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ]
-    ]
   }
 }
