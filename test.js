@@ -118,7 +118,6 @@ test('base64 decode alias order', async assert => {
   assert.end()
 })
 
-// Test
 test('base64 encode stdin', async assert => {
   const message = 'stdin should be encoded'
 

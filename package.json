@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "get-stdin": "^5.0.1",
-    "meow": "git+https://github.com/sindresorhus/meow.git#4f7ded3d6b8349fc8514b672a7d5deca2d5f2e98"
+    "meow": "^4.0.0"
   },
   "bin": {
     "b64": "cli.js"
