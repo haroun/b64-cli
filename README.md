@@ -2,6 +2,11 @@
 
 > Command line interface to decode/encode base64 data
 
+Did you know that JWT are Base64 URL encoded?
+> The output is three Base64 strings separated by dots that can be easily passed in HTML and HTTP environments [Introduction to JSON Web Tokens](https://jwt.io/introduction/)
+
+You can use `b64` to check the content of a JWT header/payload, or encode/decode embedded resources from your CSS,...
+
 
 ## Install
 
