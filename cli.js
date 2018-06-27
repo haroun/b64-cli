@@ -38,8 +38,7 @@ const cli = meow(`$ b64 --help
   }
 })
 
-const input = cli.input[0]
-const flags = cli.flags
+const {input: [input], flags} = cli
 
 function init(data, mode = {decode: true, encode: false}) {
   const from = (mode.e || mode.encode) === true ? 'ascii' : 'base64'
