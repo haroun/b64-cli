@@ -28,14 +28,14 @@
   },
   "homepage": "https://github.com/haroun/b64-cli#readme",
   "devDependencies": {
-    "execa": "^0.8.0",
+    "execa": "^0.10.0",
     "faucet": "0.0.1",
-    "tape": "^4.8.0",
-    "xo": "^0.18.2"
+    "tape": "^4.9.1",
+    "xo": "^0.21.1"
   },
   "dependencies": {
-    "get-stdin": "^5.0.1",
-    "meow": "^4.0.0"
+    "get-stdin": "^6.0.0",
+    "meow": "^5.0.0"
   },
   "bin": {
     "b64": "cli.js"
