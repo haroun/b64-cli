@@ -11,7 +11,7 @@ You can use `b64` to check the content of a JWT header/payload, or encode/decode
 ## Install
 
 ```
-$ npm install --global b64-cli
+$ npm install --global @haroun/b64-cli
 ```
 
 
