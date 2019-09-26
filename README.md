@@ -14,6 +14,12 @@ You can use `b64` to check the content of a JWT header/payload, or encode/decode
 $ npm install --global @haroun/b64-cli
 ```
 
+If you don't want to install the package globally, you can use npx instead
+
+```
+$ npx @haroun/b64-cli
+```
+
 
 ## Usage
 
@@ -21,21 +27,26 @@ $ npm install --global @haroun/b64-cli
 $ b64 --help
 
   Usage
-    $ b64 <option> <string>
+    $ b64 [--encode|--decode] <string>
+    $ echo <string> | b64
 
-  Options:
+  Options
     -e, --encode Encode
     -d, --decode Decode
 
-  Example
+  Examples
     $ b64 --encode 'test'
     dGVzdA==
+
     $ b64 -e 'test'
     dGVzdA==
+
     $ b64 'dGVzdA=='
     test
+
     $ b64 --decode 'dGVzdA=='
     test
+
     $ echo 'dGVzdA==' | b64
     test
 ```
