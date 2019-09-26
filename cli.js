@@ -1,26 +1,31 @@
 #!/usr/bin/env node
 
 const meow = require('meow')
-const stdin = require('get-stdin')
+const getStdin = require('get-stdin')
 
 const cli = meow(`$ b64 --help
 
   Usage
-    $ b64 <option> <string>
+    $ b64 [--encode|--decode] <string>
+    $ echo <string> | b64
 
-  Options:
+  Options
     -e, --encode Encode
     -d, --decode Decode
 
-  Example
+  Examples
     $ b64 --encode 'test'
     dGVzdA==
+
     $ b64 -e 'test'
     dGVzdA==
+
     $ b64 'dGVzdA=='
     test
+
     $ b64 --decode 'dGVzdA=='
     test
+
     $ echo 'dGVzdA==' | b64
     test
 `, {
@@ -40,14 +45,22 @@ const cli = meow(`$ b64 --help
 
 const {input: [input], flags} = cli
 
-function init(data, mode = {decode: true, encode: false}) {
+if (!input && process.stdin.isTTY) {
+  console.error('Please specify text to decode/encode')
+  process.exit(1)
+}
+
+const init = (data, mode = {decode: true, encode: false}) => {
   const from = (mode.e || mode.encode) === true ? 'ascii' : 'base64'
   const to = (mode.e || mode.encode) === true ? 'base64' : 'ascii'
   console.log(Buffer.from(data, from).toString(to))
 }
 
-if (input) {
-  init(input, flags)
-} else {
-  stdin().then(data => init(data, flags))
-}
+(async () => {
+  if (input) {
+    init(input, flags)
+  } else {
+    const data = await getStdin()
+    init(data, flags)
+  }
+})()
