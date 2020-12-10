@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const meow = require('meow')
-const getStdin = require('get-stdin')
+const stdin = require('get-stdin')
 
 const cli = meow(`$ b64 --help
 
@@ -50,17 +50,19 @@ if (!input && process.stdin.isTTY) {
   process.exit(1)
 }
 
-const init = (data, mode = {decode: true, encode: false}) => {
-  const from = (mode.e || mode.encode) === true ? 'ascii' : 'base64'
-  const to = (mode.e || mode.encode) === true ? 'base64' : 'ascii'
+const {encode = !flags.decode || false} = flags
+
+const init = ({data, encode = false}) => {
+  const from = encode === true ? 'ascii' : 'base64'
+  const to = encode === true ? 'base64' : 'ascii'
   console.log(Buffer.from(data, from).toString(to))
 }
 
 (async () => {
   if (input) {
-    init(input, flags)
+    init({data: input, encode})
   } else {
-    const data = await getStdin()
-    init(data, flags)
+    const data = await stdin()
+    init({data, encode})
   }
 })()
