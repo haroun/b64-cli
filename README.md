@@ -1,4 +1,4 @@
-# b64-cli [![Build Status](https://travis-ci.org/haroun/b64-cli.svg?branch=master)](https://travis-ci.org/haroun/b64-cli)
+# b64-cli ![Node.js CI](https://github.com/haroun/b64-cli/workflows/Node.js%20CI/badge.svg)
 
 > Command line interface to decode/encode base64 data
 
