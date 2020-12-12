@@ -1,4 +1,4 @@
-# b64-cli ![Node.js CI](https://github.com/haroun/b64-cli/workflows/Node.js%20CI/badge.svg)
+# b64-cli ![Node.js CI](https://github.com/haroun/b64-cli/workflows/Node.js%20CI/badge.svg) ![CodeQL](https://github.com/haroun/b64-cli/workflows/CodeQL/badge.svg)
 
 > Command line interface to decode/encode base64 data
 
