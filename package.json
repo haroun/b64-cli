@@ -4,8 +4,10 @@
   "description": "Command line interface to decode/encode base64 data",
   "main": "cli.js",
   "scripts": {
-    "debug": "node --inspect --inspect-brk cli.js",
-    "test": "xo && node test.js | faucet"
+   "debug": "node --inspect --inspect-brk cli.js",
+   "test": "node test.js | faucet",
+   "postversion": "git push && git push --tags",
+   "pretest": "xo"
   },
   "repository": {
     "type": "git",
