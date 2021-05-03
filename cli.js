@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const meow = require('meow')
-const stdin = require('get-stdin')
+import meow from 'meow'
+import stdin from 'get-stdin'
 
 const cli = meow(`$ b64 --help
 
