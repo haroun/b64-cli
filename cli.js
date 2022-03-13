@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
-const meow = require('meow')
-const stdin = require('get-stdin')
+import process from 'node:process'
+import {Buffer} from 'node:buffer'
+import meow from 'meow'
+import stdin from 'get-stdin'
 
 const cli = meow(`$ b64 --help
 
@@ -29,18 +31,19 @@ const cli = meow(`$ b64 --help
     $ echo 'dGVzdA==' | b64
     test
 `, {
+  importMeta: import.meta,
   flags: {
     encode: {
       type: 'boolean',
       alias: 'e',
-      default: false
+      default: false,
     },
     decode: {
       type: 'boolean',
       alias: 'd',
-      default: true
-    }
-  }
+      default: true,
+    },
+  },
 })
 
 const {input: [input], flags} = cli

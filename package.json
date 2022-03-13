@@ -3,11 +3,12 @@
   "version": "2.1.0",
   "description": "Command line interface to decode/encode base64 data",
   "main": "cli.js",
+  "type": "module",
   "scripts": {
-   "debug": "node --inspect --inspect-brk cli.js",
-   "test": "node test.js | faucet",
-   "postversion": "git push && git push --tags",
-   "pretest": "xo"
+    "debug": "node --inspect --inspect-brk cli.js",
+    "test": "node test.js | faucet",
+    "postversion": "git push && git push --tags",
+    "pretest": "xo"
   },
   "repository": {
     "type": "git",
@@ -30,14 +31,14 @@
   },
   "homepage": "https://github.com/haroun/b64-cli#readme",
   "devDependencies": {
-    "execa": "^5.0.0",
+    "execa": "^6.1.0",
     "faucet": "0.0.1",
     "tape": "^5.0.1",
-    "xo": "^0.36.1"
+    "xo": "^0.48.0"
   },
   "dependencies": {
-    "get-stdin": "^8.0.0",
-    "meow": "^8.0.0"
+    "get-stdin": "^9.0.0",
+    "meow": "^10.1.2"
   },
   "bin": {
     "b64": "cli.js"
