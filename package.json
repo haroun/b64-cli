@@ -1,6 +1,6 @@
 {
   "name": "@haroun/b64-cli",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Command line interface to decode/encode base64 data",
   "main": "cli.js",
   "type": "module",
